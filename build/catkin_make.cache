@@ -1,0 +1,2 @@
+subscriber-test
+-DCATKIN_DEVEL_PREFIX=/home/Myeongseo.Kim/myseo/testing/ros-test/devel -DCMAKE_INSTALL_PREFIX=/home/Myeongseo.Kim/myseo/testing/ros-test/install -G Unix Makefiles

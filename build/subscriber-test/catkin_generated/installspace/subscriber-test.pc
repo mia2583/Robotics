@@ -1,0 +1,8 @@
+prefix=/home/Myeongseo.Kim/myseo/testing/ros-test/install
+
+Name: subscriber-test
+Description: Description of subscriber-test
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
