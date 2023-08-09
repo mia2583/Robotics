@@ -8,6 +8,7 @@ add_compile_options(-std=c++11)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
+find_package(OpenCV REQUIRED)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
@@ -134,8 +135,10 @@ include_directories(
 add_library(${PROJECT_NAME}
 #  src/${PROJECT_NAME}/pcl-test.cpp
   src/PointCloudMap.cpp
+  src/OnlinePointCloud.cpp
+  src/GlobalPointCloud.cpp
 )
-target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES} ${OpenCV_LIBS})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -148,10 +151,12 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 # add_executable(${PROJECT_NAME}_node src/pcl-test_node.cpp)
 add_executable(DrawPoints src/DrawPoints.cpp src/PointCloudMap.cpp)
 add_executable(Send src/send.cpp)
+add_executable(CalculateError src/CalculateError.cpp src/OnlinePointCloud.cpp src/GlobalPointCloud.cpp)
 # g++ -c DrawPoints.cpp
 # g++ -c PointCloudMap.cpp
 # g++ -o DrawPoints *.o
 target_link_libraries(DrawPoints ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+target_link_libraries(CalculateError ${catkin_LIBRARIES} ${PCL_LIBRARIES} ${OpenCV_LIBS})
 target_link_libraries(Send ${catkin_LIBRARIES})
 
 ## Rename C++ executable without prefix

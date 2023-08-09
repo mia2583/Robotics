@@ -8,6 +8,7 @@
 // global smart pointer
 std::shared_ptr<PointCloudMap> cloudMap = nullptr;
 
+// 1. count occupied point
 void chatterCallback_online(const nav_msgs::OccupancyGridConstPtr& map)
 {
  	int height = map->info.height;
@@ -19,6 +20,7 @@ void chatterCallback_online(const nav_msgs::OccupancyGridConstPtr& map)
 	//ROS_INFO("height : %d, width: %d", cloudMap->GetHeight(), cloudMap->GetWidth());
 }
 
+// 2. draw Map
 bool receive(pcl_test::received::Response &req, pcl_test::received::Response &res)
 {
 	//ROS_INFO("received : %ld", (long int)res.width);

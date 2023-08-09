@@ -51,6 +51,9 @@ void PointCloudMap::addToPCL()
 		cloud -> points[i].x = buffer[i].second * size_of_cell + size_of_cell / 2;
 		cloud -> points[i].y = buffer[i].first * size_of_cell + size_of_cell / 2;
 		cloud -> points[i].z = 0.0;
+		// change online point to global point
+		// online_map_poses * origin * onlineMap point
+		
 	}
 }
 
