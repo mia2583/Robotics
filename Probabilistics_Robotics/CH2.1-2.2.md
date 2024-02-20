@@ -33,7 +33,7 @@ $$
 위에서 $\sum$은 covariance matrix라 하며, 정치행렬이자 대칭행렬이다. 식 (2.4)는 $\sum = \sigma^2$ 인 (2.3)의 특수한 형태이다. discrete probability distribution의 PDF 적분은 항상 1이다. 
 
 $$
-p(x,y) = p(X=x \& Y=y)
+p(x,y) = p(X=x \ and \  Y=y)
 $$
 
 두 random variable X, Y의 joint distribution은 위와 같이 표현할 수 있으며, 만약 두 random variable이 독립인 경우에는 $p(x, y) = p(x)p(y)$로 나타낼 수 있다.
