@@ -1,0 +1,35 @@
+# ROS2 빌드 관련 파일들
+/build/
+install/
+log/
+
+# CMake 관련 파일
+CMakeCache.txt
+CMakeFiles/
+Makefile
+CMakeLists.txt.user
+*.cmake
+
+# VSCode 관련 파일들 (VSCode를 사용하는 경우)
+.vscode/
+
+# IDE 관련 파일들 (예: CLion)
+.idea/
+
+# Python 관련 빌드 파일들
+*.pyc
+*.pyo
+__pycache__
+
+# macOS 관련 파일들
+.DS_Store
+
+# 임시 파일들
+*.swp
+*.bak
+*.tmp
+
+# 패키지에서 자동 생성되는 파일들
+*.egg-info/
+dist/
+build/
