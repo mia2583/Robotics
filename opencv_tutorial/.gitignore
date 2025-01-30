@@ -1,0 +1,14 @@
+# ROS2 빌드 관련 파일들
+build/
+install/
+log/
+
+# CMake 관련 파일
+CMakeCache.txt
+CMakeFiles/
+Makefile
+CMakeLists.txt.user
+*.cmake
+
+# VSCode 관련 파일들 (VSCode를 사용하는 경우)
+.vscode/
